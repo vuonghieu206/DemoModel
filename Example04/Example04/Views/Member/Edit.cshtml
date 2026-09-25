@@ -1,0 +1,43 @@
+﻿@model Example04.Models.Member
+
+<h2>Sửa thông tin thành viên</h2>
+
+<form asp-action="Edit" method="post">
+
+    <input type="hidden" asp-for="MemberId" />
+
+    <div>
+        <label asp-for="Username">Tên đăng nhập</label>
+        <input asp-for="Username" />
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="Fullname">Họ và tên</label>
+        <input asp-for="Fullname" />
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="Password">Mật khẩu</label>
+        <input asp-for="Password" />
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email" />
+    </div>
+
+    <br />
+
+    <button type="submit">Lưu thay đổi</button>
+
+</form>
+
+<br />
+
+<a asp-action="GetMembers">Quay lại danh sách</a>

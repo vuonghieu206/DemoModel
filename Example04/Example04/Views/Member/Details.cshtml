@@ -1,0 +1,30 @@
+﻿@model Example04.Models.Member
+
+<h2>Chi tiết thành viên</h2>
+
+<p>
+    <b>Mã thành viên:</b>
+    @Model.MemberId
+</p>
+
+<p>
+    <b>Tên đăng nhập:</b>
+    @Model.Username
+</p>
+
+<p>
+    <b>Họ và tên:</b>
+    @Model.Fullname
+</p>
+
+<p>
+    <b>Mật khẩu:</b>
+    @Model.Password
+</p>
+
+<p>
+    <b>Email:</b>
+    @Model.Email
+</p>
+
+<a asp-action="GetMembers">Quay lại danh sách</a>

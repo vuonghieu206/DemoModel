@@ -1,0 +1,38 @@
+﻿@model List<Example04.Models.Member>
+
+<h2>Danh sách thành viên</h2>
+
+<a asp-action="Create">Thêm mới</a>
+
+<br />
+<br />
+
+<table border="1">
+    <tr>
+        <th>Mã thành viên</th>
+        <th>Username</th>
+        <th>Họ và tên</th>
+        <th>Password</th>
+        <th>Email</th>
+        <th>Thao tác</th>
+    </tr>
+
+    @foreach (var m in Model)
+    {
+        <tr>
+            <td>@m.MemberId</td>
+            <td>@m.Username</td>
+            <td>@m.Fullname</td>
+            <td>@m.Password</td>
+            <td>@m.Email</td>
+
+            <td>
+                <a asp-action="Details" asp-route-id="@m.MemberId">Chi tiết</a>
+                |
+                <a asp-action="Edit" asp-route-id="@m.MemberId">Sửa</a>
+                |
+                <a asp-action="Delete" asp-route-id="@m.MemberId">Xóa</a>
+            </td>
+        </tr>
+    }
+</table>

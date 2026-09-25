@@ -1,0 +1,44 @@
+﻿@model Example04.Models.Member
+
+<h2>Thêm mới thành viên</h2>
+
+<form asp-action="Create" method="post">
+
+    <div>
+        <label asp-for="MemberId">Mã thành viên</label>
+        <input asp-for="MemberId" readonly />
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="Username">Tên đăng nhập</label>
+        <input asp-for="Username" />
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="Fullname">Họ và tên</label>
+        <input asp-for="Fullname" />
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="Password">Mật khẩu</label>
+        <input asp-for="Password" type="password" />
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email" type="email" />
+    </div>
+
+    <br />
+
+    <input type="submit" value="Lưu" />
+
+</form>
